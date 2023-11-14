@@ -18,4 +18,5 @@ assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(result[1], "Labs");
 
 const val = tail(myArr);
-assertEqual(val.length, myArr);
+assertEqual(val.length , myArr.length -1);
+console.log(tail([1]))
