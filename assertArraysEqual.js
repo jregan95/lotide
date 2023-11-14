@@ -11,16 +11,16 @@ const eqArrays = function(arr1, arr2) {
   }
 };
 
-const assertArraysEqual = function(bool) {
-  if (bool) {
-    console.log("This is true");
-    } else {
-      console.log("This is false");
-    }
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
+  }
 };
 
-assertArraysEqual(eqArrays([1, 5, 5], [1, 4, 6]));
-assertArraysEqual(eqArrays([1, 4, 5], [1, 4, 5]));
-assertArraysEqual(eqArrays([1, "hi", 5], [1, 4, 6]));
-assertArraysEqual(eqArrays([1, 4, 5], [1, 4, "no"]));
-assertArraysEqual(eqArrays([1, 4, "Jill"], [1, 4, "Jill"]));
+assertArraysEqual([1, 5, 5], [1, 4, 6]);
+assertArraysEqual([1, 4, 5], [1, 4, 5]);
+assertArraysEqual([1, "hi", 5], [1, 4, 6]);
+assertArraysEqual([1, 4, 5], [1, 4, "no"]);
+assertArraysEqual([1, 4, "Jill"], [1, 4, "Jill"]);
