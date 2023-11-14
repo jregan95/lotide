@@ -5,7 +5,9 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-const myArr = [1, 5, 6, 7]
+const myArr = [1, 5, 6, 7];
+const secArr = [1];
+const thirdArr = [];
 
 const tail = function(arr) {
   let newArr = arr.slice(1);
@@ -18,5 +20,10 @@ assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
 assertEqual(result[1], "Labs");
 
 const val = tail(myArr);
-assertEqual(val.length , myArr.length -1);
-console.log(tail([1]))
+assertEqual(val.length , myArr.length - 1);
+
+const secVal = tail(secArr);
+assertEqual(secVal.length, secArr. length - 1);
+
+const thirdVal = tail(thirdArr);
+assertEqual(thirdVal, thirdArr);
