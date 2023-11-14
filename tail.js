@@ -26,4 +26,4 @@ const secVal = tail(secArr);
 assertEqual(secVal.length, secArr. length - 1);
 
 const thirdVal = tail(thirdArr);
-assertEqual(thirdVal, thirdArr);
+assertEqual(thirdVal.length, thirdArr.length);
