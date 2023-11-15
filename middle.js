@@ -23,21 +23,23 @@ const assertArraysEqual = function(arr1, arr2) {
 const middle = function(arr) {
   let middleNum = 0;
   let middle = [];
-  if (arr.length % 2 !== 0) {
+  if (arr.length <= 2) {
+    return middle;
+  } else if (arr.length % 2 !== 0) {
     middleNum = Math.ceil(arr.length / 2);
     middle.push(arr[middleNum - 1]);
+    return middle;
   } else {
     middleNum = arr.length / 2;
-    middle.push([arr[middleNum - 1], arr[middleNum]]);
-  }
-  return middle;
+    middle.push(arr[middleNum - 1]);
+    middle.push(arr[middleNum]);
+    return middle;
+  }  
 };
 
 const test = [1, 3, 5, 6];
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
-console.log(middle(test));
 
+console.log(middle([1, 2, 3])); // => [2]
+console.log(middle([1,2]));
+console.log(middle(test));
 assertArraysEqual(test, [1, 3, 5, 6]);
