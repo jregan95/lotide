@@ -27,6 +27,7 @@ const takeUntil = function(array, callback) {
     }
     result.push(array[i]);
   }
+  return result;
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
