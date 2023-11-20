@@ -11,7 +11,7 @@ const eqObjects = require('./eqObjects');
 const findKey = require('./findKey');
 const findKeyByValue = require('./findKeyByValue');
 const flatten = require('./flatten');
-const letterPostions = require('./letterPositions');
+const letterPositions = require('./letterPositions');
 const map = require('./map');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
@@ -30,7 +30,7 @@ module.exports = {
   findKey: findKey,
   findKeyByValue: findKeyByValue,
   flatten: flatten,
-  letterPostions: letterPostions,
+  letterPositions: letterPostions,
   map: map,
   takeUntil: takeUntil,
   without: without
